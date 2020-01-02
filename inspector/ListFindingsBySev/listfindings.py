@@ -17,9 +17,9 @@ inspector = boto3.client('inspector', region_name = 'us-west-2')
 paginator = inspector.get_paginator('list_findings')
 
 finding_filter = {
-    'severities': [
+    'severities': [ # Uncomment which severities you would like the excel spreadsheet to show. As is only high findings will show up on excel report. 
         'High',
-#        'Medium',
+#        'Medium', 
 #        'Low',
 #        'Informational',
     ],
