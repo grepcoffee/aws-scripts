@@ -10,10 +10,12 @@ else:
 
 #AssessmentRunArn = 'fill in and uncomment this and line 32 to limit to specific assessment run.'
 #RulesPackageArn = "Fill in and uncomment this and line 28 to limit to specific rules package arn"
+AWS_Region = "us-west-2"
+
 
 max_results = 250000
 
-inspector = boto3.client('inspector', region_name = 'us-west-2')
+inspector = boto3.client('inspector', region_name = AWS_Region)
 paginator = inspector.get_paginator('list_findings')
 
 finding_filter = {
